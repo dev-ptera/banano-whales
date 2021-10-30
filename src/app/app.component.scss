@@ -1,0 +1,71 @@
+.page-container {
+    width: 100%;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    .mat-subheading-2 {
+        line-height: 24px;
+    }
+
+    .github-icon {
+        height: 24px;
+        width: 24px;
+        top: 8px;
+        right: 24px;
+        position: absolute;
+        color: white;
+        fill: white;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 1450px) {
+        .header-container {
+            background-size: cover !important;
+        }
+    }
+    .header-container {
+        position: relative;
+        width: 100%;
+        color: white;
+        padding-top: 96px;
+        padding-bottom: 96px;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+        background-size: contain;
+        background-image: url('../assets/bg-footer.svg');
+        &.md {
+            padding-top: 72px;
+            padding-bottom: 72px;
+        }
+        &.sm {
+            padding-top: 46px;
+            padding-bottom: 46px;
+        }
+        .title {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .banano-logo {
+            width: 350px;
+            height: 56px;
+            margin: 0 24px;
+            &.sm {
+                width: 250px;
+            }
+        }
+        .subtitle {
+            margin-bottom: 0;
+            margin-top: 16px;
+            &.sm {
+                margin-top: 32px;
+            }
+        }
+    }
+}
