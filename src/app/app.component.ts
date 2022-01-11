@@ -22,9 +22,9 @@ export class AppComponent {
     constructor(public vp: ViewportService, private readonly _api: ApiService) {}
 
     ngOnInit(): void {
-        Promise.all([this._api.getAccountBalances(0, 25), this._api.getAccountBalances(25, 25)])
-            .then(([firstPage, secondPage]) => {
-                this.whales = [...firstPage, ...secondPage];
+        this._api.getAccountBalances()
+            .then((whales) => {
+                this.whales = whales;
                 this.loading = false;
             })
             .catch((err) => {
@@ -36,7 +36,7 @@ export class AppComponent {
             .getAliases()
             .then((data) => {
                 for (const entry of data) {
-                    this.aliasMap.set(entry.addr, entry.alias);
+                    this.aliasMap.set(entry.address, entry.alias);
                 }
             })
             .catch((err) => {

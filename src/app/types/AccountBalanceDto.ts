@@ -1,5 +1,4 @@
 export type AccountBalanceDto = {
-    addr: string;
-    ban: number;
-    representative: string;
+    address: string;
+    amount: number;
 };

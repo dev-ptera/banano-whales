@@ -31,9 +31,9 @@
         >
             <app-monkey
                 *ngFor="let whale of whales; let i = index;"
-                [address]="whale.addr"
-                [ban]="whale.ban"
-                [alias]="getAlias(whale.addr)"
+                [address]="whale.address"
+                [ban]="whale.amount"
+                [alias]="getAlias(whale.address)"
                 [rank]='i+1'
             ></app-monkey>
         </div>
